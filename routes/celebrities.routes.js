@@ -1,11 +1,10 @@
-// starter code in both routes/celebrities.routes.js and routes/movies.routes.js
 const router = require("express").Router();
 const Celebrity = require("../models/Celebrity.model");
 const Movie = require("../models/Movies.model");
 
 /* GET celebrities page */
 router.get("/celebrities", (req, res, next) => {
-    //route ---- this is the url
+    //  the url
     Celebrity.find()
     .then((celebritiesList) => {
         res.render("celebrities/celebrities", {celebritiesList});
@@ -13,7 +12,7 @@ router.get("/celebrities", (req, res, next) => {
     .catch((err) => {
         console.log(err)
     });
-    //view ----- an hbs file
+   
 });
 
 router.get("/celebrities/create", (req, res, next) => {
