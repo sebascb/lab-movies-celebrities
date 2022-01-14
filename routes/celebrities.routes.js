@@ -29,7 +29,7 @@ router.post("/celebrities/create", (req, res, next) => {
         })
         .catch((err) => {
             console.log(err)
-            res.redirect("/celebrities/create") // without / view...render-> view, redirect->url
+            res.redirect("/celebrities/create") 
         });
 })
 
